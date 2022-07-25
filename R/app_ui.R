@@ -10,9 +10,33 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("trackpack")
+      h1("trackpack"),
+      titlePanel("Hello Shiny!"),
+
+      # Sidebar layout with input and output definitions ----
+      sidebarLayout(
+
+        # Sidebar panel for inputs ----
+        sidebarPanel(
+
+          dateRangeInput("daterange4", "Date range:",
+                         start = Sys.Date()-10,
+                         end = Sys.Date()+10),
+
+
+        ),
+
+        # Main panel for displaying outputs ----
+        mainPanel(
+
+          # Output: Histogram ----
+          plotOutput(outputId = "distPlot")
+
+        )
+      )
     )
-  )
+
+    )
 }
 
 #' Add external Resources to the Application

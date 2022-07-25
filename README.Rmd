@@ -36,6 +36,20 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(trackpack)
 ## basic example code
+library(ggplot2)
+library(cranlogs)
+stats <- cran_downloads("lazytrade", from=Sys.Date() - 100, to=Sys.Date()-1)
+ggplot(stats, aes(date, count)) +
+  geom_col() +
+  labs(
+    title=sprintf(
+      "{stats} downloads to %s",
+      Sys.Date() - 1
+    ),
+    caption = "dat from {cranlogs}"
+  ) + 
+  theme_minimal()
+
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
