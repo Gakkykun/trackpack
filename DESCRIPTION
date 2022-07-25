@@ -23,3 +23,5 @@ Suggests:
 Config/testthat/edition: 3
 Language: en-US
 VignetteBuilder: knitr
+URL: https://github.com/Gakkykun/trackpack
+BugReports: https://github.com/Gakkykun/trackpack/issues
