@@ -11,7 +11,7 @@ app_ui <- function(request) {
     # Your application UI logic
     fluidPage(
       h1("trackpack"),
-      titlePanel("Hello Shiny!"),
+      hr(),
 
       # Sidebar layout with input and output definitions ----
       sidebarLayout(
