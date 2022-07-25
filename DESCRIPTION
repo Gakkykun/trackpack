@@ -8,6 +8,8 @@ Description: This application downloads data from CRAN. The application is visua
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
+    cranlogs,
+    ggplot2,
     golem (>= 0.3.3),
     shiny (>= 1.7.1)
 Encoding: UTF-8
